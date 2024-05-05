@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="style.css"> 
+<link rel="script" href="script.js">
+
+<div class="container">
+
+    <div class="slide">
+
+        <div class="item" style="background-image: url(Switzerland.jpg);">
+            <div class="content">
+                <div class="name">Switzerland</div>
+                <div class="des">Switzerland is a mountainous Central European country, home to numerous lakes, villages and the high peaks of the Alps. Its cities contain medieval quarters, with landmarks like capital Bern’s Zytglogge clock tower and Lucerne’s wooden chapel bridge. The country is also known for its ski resorts and hiking trails. Banking and finance are key industries, and Swiss watches and chocolate are world renowned.</div>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(Australia.jpg);">
+            <div class="content">
+                <div class="name">Australia</div>
+                <div class="des">Australia, officially the Commonwealth of Australia, is a sovereign country comprising the mainland of the Australian continent, the island of Tasmania, and numerous smaller islands. Australia is the largest country by area in Oceania and the world's sixth-largest country.</div>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(Finland.jpg);">
+            <div class="content">
+                <div class="name">Finland</div>
+                <div class="des">Finland is a Northern European nation bordering Sweden, Norway and Russia. Its capital, Helsinki, occupies a peninsula and surrounding islands in the Baltic Sea. Helsinki is home to the 18th-century sea fortress Suomenlinna, the fashionable Design District and diverse museums. The Northern Lights can be seen from the country's Arctic Lapland province, a vast wilderness with national parks and ski resorts.</div>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(Iceland.jpg);">
+            <div class="content">
+                <div class="name">Iceland</div>
+                <div class="des">Iceland, a Nordic island nation, is defined by its dramatic landscape with volcanoes, geysers, hot springs and lava fields. Massive glaciers are protected in Vatnajökull and Snæfellsjökull national parks. Most of the population lives in the capital, Reykjavik, which runs on geothermal power and is home to the National and Saga museums, tracing Iceland’s Viking history.</div>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(Ireland.jpg);">
+            <div class="content">
+                <div class="name">Ireland</div>
+                <div class="des">The Republic of Ireland occupies most of the island of Ireland, off the coast of England and Wales. Its capital, Dublin, is the birthplace of writers like Oscar Wilde, and home of Guinness beer. The 9th-century Book of Kells and other illustrated manuscripts are on show in Dublin’s Trinity College Library. Dubbed the "Emerald Isle” for its lush landscape, the country is dotted with castles like medieval Cahir Castle.</div>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(Netherland.jpg);">
+            <div class="content">
+                <div class="name">Netherland</div>
+                <div class="des">The Netherlands, a country in northwestern Europe, is known for a flat landscape of canals, tulip fields, windmills and cycling routes. Amsterdam, the capital, is home to the Rijksmuseum, Van Gogh Museum and the house where Jewish diarist Anne Frank hid during WWII. Canalside mansions and a trove of works from artists including Rembrandt and Vermeer remain from the city's 17th-century "Golden Age."</div>
+                <button>See More</button>
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <button class="prev" style="background-image: url();"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        <button class="next" style="background-image: url();"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+    </div>
+    <script>
+        let next = document.querySelector('.next')
+        let prev = document.querySelector('.prev')
+
+        next.addEventListener('click', function(){
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.slide').appendChild(items[0])
+        })
+
+        prev.addEventListener('click', function(){
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.slide').prepend(items[items.length - 1])
+        })
+    </script>
+</div>
